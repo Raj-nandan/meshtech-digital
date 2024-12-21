@@ -3,8 +3,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import PageHeader from '../components/PageHeader';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
+
+
+
+
 
 const Contact = () => {
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -17,11 +23,88 @@ const Contact = () => {
     message: '',
   });
 
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState({ type: '', message: '' });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    
+    const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus({
+        type: 'error',
+        message: 'Email service configuration is missing.'
+      });
+      return;
+    }
+
+    try {
+      await emailjs.sendForm(
+        serviceId,
+        templateId,
+        e.target,
+        { publicKey }
+      );
+      
+      setStatus({
+        type: 'success',
+        message: 'Message sent successfully!'
+
+      });
+      alert('Message sent successfully!');
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again.'
+      });
+      console.error('Email error:', error);
+    }
   };
+
+
+
+
+
+
+
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const form = e.target;
+
+  //   const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID;
+  //   const YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID;
+  //   const YOUR_USER_ID = process.env.REACT_APP_YOUR_PUBLIC_KEY;
+
+  //   if (!YOUR_SERVICE_ID || !YOUR_TEMPLATE_ID || !YOUR_USER_ID) {
+  //     console.error('One or more environment variables are not set.');
+  //   }
+
+  //   console.log(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, YOUR_USER_ID);
+
+  //   emailjs
+  //     .sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form, {
+  //       publicKey: YOUR_USER_ID,
+  //     })
+  //     .then(
+  //       () => {
+  //         console.log('SUCCESS!');
+  //       },
+  //       (error) => {
+  //         console.log('FAILED...', error.text);
+  //       },
+  //     );
+  // };
 
   const handleChange = (e) => {
     setFormData({
@@ -50,11 +133,11 @@ const Contact = () => {
 
   return (
     <div>
-      <PageHeader 
-        title="Contact Us" 
+      <PageHeader
+        title="Contact Us"
         subtitle="Get in touch with our team"
       />
-      
+
       <div className="py-20 bg-gradient-to-b from-light dark:from-dark to-white dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
