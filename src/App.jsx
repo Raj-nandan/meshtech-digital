@@ -11,7 +11,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/">
         <div className="min-h-screen flex flex-col bg-light dark:bg-dark transition-colors duration-300">
           <Navbar />
           <main className="flex-grow">
