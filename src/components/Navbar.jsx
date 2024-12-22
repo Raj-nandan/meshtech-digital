@@ -36,68 +36,58 @@ const Navbar = () => {
             MESH TECH DIGITAL
           </NavLink>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `transition-colors duration-300 ${
-                  shouldUseLightText
-                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
-                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
-                } ${isActive ? 'font-semibold' : 'font-medium'}`
-              }
+           {/* Desktop Menu */}
+           <div className="hidden md:flex items-center space-x-8">
+            <a
+              href="/"
+              className={`transition-colors duration-300 ${
+                shouldUseLightText
+                  ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                  : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+              }`}
             >
               Home
-            </NavLink>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `transition-colors duration-300 ${
-                  shouldUseLightText
-                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
-                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
-                } ${isActive ? 'font-semibold' : 'font-medium'}`
-              }
+            </a>
+            <a
+              href="/services"
+              className={`transition-colors duration-300 ${
+                shouldUseLightText
+                  ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                  : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+              }`}
             >
               Services
-            </NavLink>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) =>
-                `transition-colors duration-300 ${
-                  shouldUseLightText
-                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
-                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
-                } ${isActive ? 'font-semibold' : 'font-medium'}`
-              }
+            </a>
+            <a
+              href="/projects"
+              className={`transition-colors duration-300 ${
+                shouldUseLightText
+                  ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                  : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+              }`}
             >
               Projects
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `transition-colors duration-300 ${
-                  shouldUseLightText
-                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
-                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
-                } ${isActive ? 'font-semibold' : 'font-medium'}`
-              }
+            </a>
+            <a
+              href="/about"
+              className={`transition-colors duration-300 ${
+                shouldUseLightText
+                  ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                  : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+              }`}
             >
               About
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `transition-colors duration-300 ${
-                  shouldUseLightText
-                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
-                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
-                } ${isActive ? 'font-semibold' : 'font-medium'}`
-              }
+            </a>
+            <a
+              href="/contact"
+              className={`transition-colors duration-300 ${
+                shouldUseLightText
+                  ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                  : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+              }`}
             >
               Contact
-            </NavLink>
+            </a>
             <ThemeToggle />
             <a 
               href="/contact" 
@@ -128,37 +118,77 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-white dark:bg-dark/95 border-t dark:border-gray-800 mt-2"
-        >
-          <div className="px-4 py-2 space-y-1">
-            {links.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  `block py-2 px-4 rounded-lg ${
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="md:hidden bg-white dark:bg-dark/95 border-t dark:border-gray-800 mt-2"
+            >
+              <div className="px-4 py-2 space-y-1">
+                {/* Directly embedding anchor tags instead of using NavLink */}
+                <a
+                  href="/"
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-2 px-4 rounded-lg ${
                     isActive 
                       ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
                       : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
-            <div className="pt-2">
-              <a href="/contact" className="btn-primary w-full text-center block">
-                Get Started
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      )}
+                  }`}
+                >
+                  Home
+                </a>
+                <a
+                  href="/services"
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-2 px-4 rounded-lg ${
+                    isActive 
+                      ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
+                      : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  Services
+                </a>
+                <a
+                  href="/projects"
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-2 px-4 rounded-lg ${
+                    isActive 
+                      ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
+                      : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  Projects
+                </a>
+                <a
+                  href="/about"
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-2 px-4 rounded-lg ${
+                    isActive 
+                      ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
+                      : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  About
+                </a>
+                <a
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-2 px-4 rounded-lg ${
+                    isActive 
+                      ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
+                      : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  Contact
+                </a>
+                <div className="pt-2">
+                  <a href="/contact" className="btn-primary w-full text-center block">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          )}
     </nav>
   );
 };

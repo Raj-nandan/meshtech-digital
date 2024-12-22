@@ -13,7 +13,7 @@ const Contact = () => {
 
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0,
   });
 
   const [formData, setFormData] = useState({
@@ -145,7 +145,7 @@ const Contact = () => {
               <motion.div
                 key={index}
                 ref={ref}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 10 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="text-center p-6 bg-white dark:bg-dark rounded-lg shadow-md"
@@ -159,7 +159,7 @@ const Contact = () => {
 
           <motion.div
             ref={ref}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto bg-white dark:bg-gradient-to-b from-light dark:from-dark to-white dark:to-gray-900 rounded-lg shadow-md p-8"

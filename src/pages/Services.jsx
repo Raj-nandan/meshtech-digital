@@ -6,7 +6,7 @@ import { FaCode, FaPaintBrush, FaChartLine, FaMobile, FaServer, FaSearch } from 
 const Services = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.01,
   });
 
   const services = [
@@ -62,7 +62,7 @@ const Services = () => {
               <motion.div
                 key={index}
                 ref={ref}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 0 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow "
