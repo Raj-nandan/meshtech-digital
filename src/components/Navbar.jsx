@@ -9,13 +9,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isTransparent, shouldUseLightText, scrolled } = useNavbarState();
 
-  const links = [
-    { path: '/', label: 'Home' },
-    { path: '/services', label: 'Services' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/about', label: 'About' },
-    { path: '/contact', label: 'Contact' },
-  ];
+  // const links = [
+  //   { path: '/', label: 'Home' },
+  //   { path: '/services', label: 'Services' },
+  //   { path: '/projects', label: 'Projects' },
+  //   { path: '/about', label: 'About' },
+  //   { path: '/contact', label: 'Contact' },
+  // ];
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
@@ -38,21 +38,66 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {links.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  `transition-colors duration-300 ${
-                    shouldUseLightText
-                      ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
-                      : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
-                  } ${isActive ? 'font-semibold' : 'font-medium'}`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `transition-colors duration-300 ${
+                  shouldUseLightText
+                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+                } ${isActive ? 'font-semibold' : 'font-medium'}`
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                `transition-colors duration-300 ${
+                  shouldUseLightText
+                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+                } ${isActive ? 'font-semibold' : 'font-medium'}`
+              }
+            >
+              Services
+            </NavLink>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                `transition-colors duration-300 ${
+                  shouldUseLightText
+                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+                } ${isActive ? 'font-semibold' : 'font-medium'}`
+              }
+            >
+              Projects
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `transition-colors duration-300 ${
+                  shouldUseLightText
+                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+                } ${isActive ? 'font-semibold' : 'font-medium'}`
+              }
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `transition-colors duration-300 ${
+                  shouldUseLightText
+                    ? 'text-white/80 hover:text-white dark:text-gray-300 dark:hover:text-white'
+                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white'
+                } ${isActive ? 'font-semibold' : 'font-medium'}`
+              }
+            >
+              Contact
+            </NavLink>
             <ThemeToggle />
             <a 
               href="/contact" 
