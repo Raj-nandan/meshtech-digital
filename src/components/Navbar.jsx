@@ -130,7 +130,7 @@ const Navbar = () => {
                   href="/"
                   onClick={() => setIsOpen(false)}
                   className={`block py-2 px-4 rounded-lg ${
-                    isActive 
+                    shouldUseLightText 
                       ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
                       : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                   }`}
@@ -141,7 +141,7 @@ const Navbar = () => {
                   href="/services"
                   onClick={() => setIsOpen(false)}
                   className={`block py-2 px-4 rounded-lg ${
-                    isActive 
+                    shouldUseLightText 
                       ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
                       : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                   }`}
@@ -152,7 +152,7 @@ const Navbar = () => {
                   href="/projects"
                   onClick={() => setIsOpen(false)}
                   className={`block py-2 px-4 rounded-lg ${
-                    isActive 
+                    shouldUseLightText 
                       ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
                       : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                   }`}
@@ -163,7 +163,7 @@ const Navbar = () => {
                   href="/about"
                   onClick={() => setIsOpen(false)}
                   className={`block py-2 px-4 rounded-lg ${
-                    isActive 
+                    shouldUseLightText 
                       ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
                       : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                   }`}
@@ -174,7 +174,7 @@ const Navbar = () => {
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className={`block py-2 px-4 rounded-lg ${
-                    isActive 
+                    shouldUseLightText 
                       ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-white' 
                       : 'text-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                   }`}
