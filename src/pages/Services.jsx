@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import PageHeader from '../components/PageHeader';
-import { FaCode, FaPaintBrush, FaChartLine, FaMobile, FaServer, FaSearch } from 'react-icons/fa';
+import { FaCode, FaPaintBrush, FaChartLine, FaServer, FaVideo, FaBullhorn, FaSearch, FaShareAlt, FaMoneyBillWave } from 'react-icons/fa';
 
 const Services = () => {
   const [ref, inView] = useInView({
@@ -12,40 +12,59 @@ const Services = () => {
   const services = [
     {
       icon: <FaCode />,
-      title: "Web Development",
+      title: "Website & App Development",
       description: "Custom websites and web applications built with modern technologies and best practices.",
       features: ["Responsive Design", "Performance Optimization", "SEO-friendly Structure"],
     },
     {
       icon: <FaPaintBrush />,
-      title: "UI/UX Design",
-      description: "Beautiful and intuitive user interfaces that enhance user experience and engagement.",
-      features: ["User Research", "Wireframing", "Prototype Development"],
+      title: "Graphic Designing", 
+      description: "Creative graphic design solutions that effectively communicate your brand's message and engage your audience.", // {{ edit_2 }}
+      features: ["Logo Design", "Brand Identity", "Marketing Materials", "Social Media Graphics"], // {{ edit_3 }}
     },
     {
       icon: <FaChartLine />,
-      title: "Digital Marketing",
-      description: "Strategic marketing solutions to grow your online presence and reach your target audience.",
-      features: ["Social Media Marketing", "Content Strategy", "Email Campaigns"],
+      title: "Marketing Consultancy",
+      description: "Expert guidance and strategies to enhance your marketing efforts and drive business growth.", // {{ edit_2 }}
+      features: ["Market Analysis", "Brand Strategy", "Campaign Management", "Performance Tracking"], // {{ edit_3 }}
     },
     {
-      icon: <FaMobile />,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications for iOS and Android devices.",
-      features: ["Cross-platform Development", "Native Apps", "App Store Optimization"],
+      icon: <FaVideo />,
+      title: "Content Creation",
+      description: "Engaging and high-quality content tailored to your audience, including articles, blogs, and multimedia.", // {{ edit_2 }}
+      features: ["Blog Writing", "Video Production", "Social Media Content", "Graphic Design"], // {{ edit_3 }}
     },
     {
-      icon: <FaServer />,
-      title: "Backend Development",
-      description: "Robust and scalable server-side solutions to power your applications.",
-      features: ["API Development", "Database Design", "Cloud Integration"],
+      icon: <FaBullhorn />, 
+      title: "Traditional Marketing", 
+      description: "Effective marketing strategies that leverage traditional media channels to reach your target audience.", // {{ edit_2 }}
+      features: ["Print Advertising", "Television Campaigns", "Radio Promotions", "Direct Mail"], // {{ edit_3 }}
     },
     {
-      icon: <FaSearch />,
-      title: "SEO Services",
-      description: "Improve your search engine rankings and increase organic traffic.",
-      features: ["Keyword Research", "On-page SEO", "Technical SEO"],
+      icon: <FaSearch />, 
+      title: "SEO & SEM",
+      description: "Comprehensive strategies to enhance your online visibility through search engine optimization and search engine marketing.", // {{ edit_2 }}
+      features: ["Keyword Research", "On-page SEO", "Pay-Per-Click Advertising", "Performance Tracking"], // {{ edit_3 }}
     },
+    {
+      icon: <FaShareAlt />, 
+      title: "Social Media Marketing", 
+      description: "Strategic social media campaigns to enhance brand awareness and engage with your audience.", // {{ edit_2 }}
+      features: ["Content Creation", "Audience Engagement", "Analytics and Reporting", "Ad Campaign Management"], // {{ edit_3 }}
+    },
+    {
+      icon: <FaMoneyBillWave />,
+      title: "Pay Per Click", 
+      description: "Targeted advertising strategies to maximize ROI through effective PPC campaigns.", // {{ edit_2 }}
+      features: ["Keyword Targeting", "Ad Creation", "Performance Tracking", "Budget Management"], // {{ edit_3 }}
+    },
+    {
+      icon: <FaServer />, 
+      title: "Backend Development", 
+      description: "Robust and scalable server-side solutions to power your applications.", // {{ edit_2 }}
+      features: ["API Development", "Database Design", "Cloud Integration"], // {{ edit_3 }}
+    },
+
   ];
 
   return (

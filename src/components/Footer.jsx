@@ -60,12 +60,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Logo Section */}
-        <div className="border-t border-gray-200 dark:border-gray-800 pt-8 mt-8">
+        <div className="pt-8 mt-8">
           <div className="flex flex-col items-center justify-center">
             <img 
-              src="/images/newlogo-modified (1).png" 
+              src="/images/darkImg.png" 
               alt="MeshTech Digital" 
-              className="h-20 w-auto mb-4 opacity-80 hover:opacity-100 transition-all duration-300 transform hover:scale-105"
+              className="h-40 w-auto mb-4 opacity-80 hover:opacity-100 transition-all duration-300 transform hover:scale-105"
             />
             <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
               © {new Date().getFullYear()} MeshTech Digital. All rights reserved.
