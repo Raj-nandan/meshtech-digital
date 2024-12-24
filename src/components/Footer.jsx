@@ -24,12 +24,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {['Home', 'Services', 'Projects', 'About', 'Contact'].map((item) => (
                 <li key={item}>
-                  <Link 
-                    to={`/${item.toLowerCase()}`} 
+                  <a 
+                    href={`/${item.toLowerCase()}`} 
                     className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
                   >
                     {item}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -40,7 +40,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Contact Us</h3>
             <div className="space-y-4">
               <p className="text-gray-600 dark:text-gray-400">
-                Email: info@meshtechdigital.com
+              rahul@meshtechdigital.com
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
