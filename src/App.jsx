@@ -15,12 +15,12 @@ function App() {
         <div className="min-h-screen flex flex-col bg-light dark:bg-dark transition-colors duration-300">
           <Navbar />
           <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
+          <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/about" element={<About />} />
+              <Route exact path="/services" element={<Services />} />
+              <Route exact path="/projects" element={<Projects />} />
+              <Route exact path="/contact" element={<Contact />} />
             </Routes>
           </main>
           <Footer />
