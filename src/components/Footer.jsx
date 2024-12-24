@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import logo from '../assets/images/darkImg.png';
 
 const Footer = () => {
   return (
@@ -63,7 +64,7 @@ const Footer = () => {
         <div className="pt-8 mt-8">
           <div className="flex flex-col items-center justify-center">
             <img 
-              src="/images/darkImg.png" 
+              src={logo}
               alt="MeshTech Digital" 
               className="h-40 w-auto mb-4 opacity-80 hover:opacity-100 transition-all duration-300 transform hover:scale-105"
             />

@@ -7,18 +7,18 @@ const Home = () => {
   const features = [
     {
       icon: <HiCode />,
-      title: "Clean Code",
-      description: "We write maintainable, scalable, and efficient code following best practices.",
-    },
-    {
-      icon: <HiLightningBolt />,
-      title: "Fast Performance",
-      description: "Lightning-fast loading times and smooth user experience.",
+      title: "End-to-End Development",
+      description: "Comprehensive website and app development with backend integration for seamless functionality.",
     },
     {
       icon: <HiSparkles />,
-      title: "Modern Design",
-      description: "Beautiful, responsive designs that work on all devices.",
+      title: "Creative & Strategic Design",
+      description: "Graphic designing, content creation, and modern designs tailored to elevate your brand identity.",
+    },
+    {
+      icon: <HiLightningBolt />,
+      title: "Targeted Marketing Solutions",
+      description: "Expertise in SEO, SEM, social media, and pay-per-click campaigns for impactful outreach.",
     },
   ];
 
@@ -87,7 +87,7 @@ const Home = () => {
                     className="absolute -bottom-4 -right-4 bg-accent text-white px-6 py-3 rounded-lg"
                     whileHover={{ scale: 1.05 }}
                   >
-                    <p className="font-display font-bold">10+ Years Experience</p>
+                    <p className="font-display font-bold">Expertise Meets Fresh Perspectives</p>
                   </motion.div>
                 </motion.div>
               </div>
