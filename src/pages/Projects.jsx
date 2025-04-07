@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import PageHeader from '../components/PageHeader';
+import chair from '../assets/images/chair.jpeg';
+import laptop from '../assets/images/laptop.jpeg';
+import mobile from '../assets/images/mobile.jpeg';
+import doctor from '../assets/images/doctor.jpeg';
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -13,28 +17,28 @@ const Projects = () => {
       title: "E-commerce Platform",
       category: "Web Development",
       description: "A modern e-commerce solution with seamless user experience and secure payment integration.",
-      image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3",
+      image: chair,
       technologies: ["React", "Node.js", "MongoDB"],
     },
     {
       title: "Portfolio Website",
       category: "UI/UX Design",
       description: "Clean and professional portfolio for a creative agency with stunning animations.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3",
+      image: laptop,
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
     },
     {
       title: "Mobile Banking App",
       category: "Mobile Development",
       description: "Secure and user-friendly mobile banking application with real-time transactions.",
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3",
+      image: mobile,
       technologies: ["React Native", "Redux", "Firebase"],
     },
     {
       title: "Healthcare Platform",
       category: "Web Development",
       description: "Comprehensive healthcare management system for patients and doctors.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3",
+      image: doctor,
       technologies: ["React", "Express", "PostgreSQL"],
     },
   ];

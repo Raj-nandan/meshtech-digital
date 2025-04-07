@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { HiArrowRight, HiCode, HiLightningBolt, HiSparkles } from 'react-icons/hi';
 import ClientReviews from '../components/ClientReviews';
 import CompanyClients from '../components/CompanyClients';
+import laptop from '../assets/images/laptop.jpeg';
+import certificate1 from '../assets/images/certification.png';
+import certificate2 from '../assets/images/verification.png';
 
 const Home = () => {
   const features = [
@@ -79,7 +82,8 @@ const Home = () => {
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3"
+                    // src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3"
+                    src={laptop}
                     alt="Digital Solutions"
                     className="rounded-lg w-full"
                   />
@@ -129,6 +133,18 @@ const Home = () => {
                 <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Government Certifications */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-primary dark:text-white mb-4">Certified & Trusted</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">Trusted and verified by leading authorities.</p>
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-2">
+            <img src={certificate2} alt="ISO 9001 Certification" />
+            <img src={certificate1} alt="GDPR Compliance"  />
           </div>
         </div>
       </section>

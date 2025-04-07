@@ -40,16 +40,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Contact Us</h3>
             <div className="space-y-4">
               <p className="text-gray-600 dark:text-gray-400">
-              rahul@meshtechdigital.com
+              info@meshtechdigital.com
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <a href="https://www.facebook.com/share/1BtrUWsCFQ/" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
                   <FaFacebook size={20} />
                 </a>
                 <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
                   <FaTwitter size={20} />
                 </a>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <a href="https://www.instagram.com/meshtechdigital?igsh=aG1la2J1NW9naWx2" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
                   <FaInstagram size={20} />
                 </a>
                 <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">

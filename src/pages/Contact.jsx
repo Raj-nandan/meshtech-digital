@@ -117,12 +117,12 @@ const Contact = () => {
     {
       icon: <FaPhone />,
       title: "Phone",
-      details: "+91 7654680176",
+      details: "+91 9431001728",
     },
     {
       icon: <FaEnvelope />,
       title: "Email",
-      details: "rahul@meshtechdigital.com",
+      details: "info@meshtechdigital.com",
     },
     {
       icon: <FaMapMarkerAlt />,

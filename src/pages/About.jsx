@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import PageHeader from '../components/PageHeader';
 import { FaLightbulb, FaHandshake, FaRocket } from 'react-icons/fa';
+import people from '../assets/images/people.jpeg'
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -53,15 +54,15 @@ const About = () => {
               </p>
 
               <p className="text-dark font-bold text-end mr-5 dark:text-white">
-                Founder & CEO
+                - Founder & CEO
               </p>
-              <p className="text-dark font-bold text-end mr-3 dark:text-white">
+              {/* <p className="text-dark font-bold text-end mr-3 dark:text-white">
                 - RAHUL TIWARY
-              </p>
+              </p> */}
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3"
+                src={people}
                 alt="Team collaboration"
                 className="rounded-lg shadow-lg"
               />

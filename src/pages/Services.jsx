@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import PageHeader from '../components/PageHeader';
-import { FaCode, FaPaintBrush, FaChartLine, FaServer, FaVideo, FaBullhorn, FaSearch, FaShareAlt, FaMoneyBillWave } from 'react-icons/fa';
+import { FaCode, FaPaintBrush, FaChartLine, FaServer, FaVideo, FaBullhorn, FaSearch, FaShareAlt, FaMoneyBillWave, FaShoppingCart } from 'react-icons/fa';
 
 const Services = () => {
   const [ref, inView] = useInView({
@@ -63,6 +63,18 @@ const Services = () => {
       title: "Backend Development", 
       description: "Robust and scalable server-side solutions to power your applications.", // {{ edit_2 }}
       features: ["API Development", "Database Design", "Cloud Integration"], // {{ edit_3 }}
+    },
+    {
+      icon: <FaShoppingCart/>, 
+      title: "Ecommerce Website", 
+      description: "Comprehensive ecommerce solutions including shopping cart integration, payment gateway setup, and user-friendly interfaces.", // {{ edit_2 }}
+      features: ["Shopping Cart Integration", "Payment Gateway Setup", "User-Friendly Interface", "Inventory Management"], // {{ edit_3 }}
+    },
+    {
+      icon: <FaBullhorn />, 
+      title: "Flipkart & Amazon Ads", 
+      description: "Targeted advertising strategies for Flipkart and Amazon to maximize product visibility and sales.", // {{ edit_2 }}
+      features: ["Product Listing Optimization", "Ad Campaign Management", "Performance Analytics", "Budget Management"], // {{ edit_3 }}
     },
 
   ];
