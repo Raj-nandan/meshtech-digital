@@ -23,6 +23,8 @@ function App() {
               <Route exact path="/contact" element={<Contact />} />
             </Routes>
           </main>
+
+          
           <Footer />
         </div>
       </Router>
