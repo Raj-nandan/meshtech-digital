@@ -53,9 +53,9 @@ const About = () => {
                 Our team of experienced professionals combines creativity with technical expertise to deliver solutions that not only look great but also drive results. We take pride in our ability to understand our clients' unique needs and transform their vision into reality.
               </p>
 
-              <p className="text-dark font-bold text-end mr-5 dark:text-white">
+              {/* <p className="text-dark font-bold text-end mr-5 dark:text-white">
                 - Founder & CEO
-              </p>
+              </p> */}
               {/* <p className="text-dark font-bold text-end mr-3 dark:text-white">
                 - RAHUL TIWARY
               </p> */}

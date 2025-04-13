@@ -1,28 +1,31 @@
 import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa';
+import person1 from '../assets/images/person1.png'
+import person2 from '../assets/images/person2.png'
+import person3 from '../assets/images/person3.png'
 
 const reviews = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "CEO, TechStart",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    name: "Priya Sharma",
+    // role: "CEO, TechStart",
+    image: person1,
     rating: 5,
     comment: "Working with MESH TECH DIGITAL transformed our online presence. Their attention to detail and innovative solutions exceeded our expectations."
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Marketing Director, InnovateCo",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
+    name: "Rajesh Patel",
+    // role: "Marketing Director, InnovateCo",
+    image: person2,
     rating: 5,
     comment: "Exceptional service and outstanding results. The team's expertise in web development helped us achieve our digital goals."
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    role: "Founder, GrowthLabs",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
+    name: "Anjali Verma",
+    // role: "Founder, GrowthLabs",
+    image: person3,
     rating: 5,
     comment: "The most professional and creative team we've worked with. They delivered our project on time and with exceptional quality."
   }
@@ -57,11 +60,11 @@ const ClientReviews = () => {
                 <img
                   src={review.image}
                   alt={review.name}
-                  className="w-16 h-16 rounded-full object-cover mr-4"
+                  className="w-16 h-16 rounded-full object-fill mr-4"
                 />
                 <div>
                   <h3 className="font-semibold text-lg dark:text-white">{review.name}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">{review.role}</p>
+                  {/* <p className="text-gray-600 dark:text-gray-400 text-sm">{review.role}</p> */}
                 </div>
               </div>
               <div className="flex text-yellow-400 mb-3">
