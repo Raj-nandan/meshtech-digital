@@ -46,13 +46,13 @@ const Footer = () => {
                 <a href="https://www.facebook.com/share/1BtrUWsCFQ/" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
                   <FaFacebook size={20} />
                 </a>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                {/* <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
                   <FaTwitter size={20} />
-                </a>
+                </a> */}
                 <a href="https://www.instagram.com/meshtechdigital?igsh=aG1la2J1NW9naWx2" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
                   <FaInstagram size={20} />
                 </a>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/company/mesh-tech-digital" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
                   <FaLinkedin size={20} />
                 </a>
               </div>
